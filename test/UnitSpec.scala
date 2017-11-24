@@ -34,6 +34,9 @@ class UnitSpec extends PlaySpec {
       }
     }
 
+    "should fail" in {
+      1+1 must equal (3)
+    }
   }
 
 }

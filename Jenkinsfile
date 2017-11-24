@@ -23,5 +23,5 @@ node {
   stage('Test') {
     sh "${SBT} test"
   }
-  
+
 }
