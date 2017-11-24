@@ -16,20 +16,12 @@ node {
     sh "${SBT} clean"
   }
 
-  stage('Test') {
-    sh "${SBT} test"
-  }
-
   stage('Build') {
     sh "${SBT} package"
   }
 
-  stage('Publish-Local') {
-    sh "${SBT} publish-local"
+  stage('Test') {
+    sh "${SBT} test"
   }
-
-  stage('Archive') {
-    archive 'target/**/test-dep*.jar'
-  }
-
+  
 }
